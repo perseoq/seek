@@ -1,4 +1,42 @@
 # Seek | DeepSeek CLI (No oficial) 
+
+
+```sh
+DEEPSEEK CLI CHAT TOOL - MANUAL
+
+Uso básico:
+  seek -i "tu consulta" [opciones]
+  seek config [opciones]
+
+Comandos principales:
+  config          Configura tu API key y preferencias
+  chat           Modo interactivo de chat
+
+Opciones de consulta:
+  -i, --input     Texto de entrada para DeepSeek (requerido)
+  -t, --terminal  Mostrar output en terminal
+  -o, --output    Guardar output en archivo(s)
+  -n, --name      Nombre base para los archivos de salida
+
+Opciones de output (requieren -o):
+  -m, --markdown  Guardar como archivo markdown
+  -f, --file      Guardar como archivo de texto
+  -c, --code      Extraer bloques de código a archivos
+
+Opciones de compresión (requieren -o):
+  -gz             Comprimir output como tar.gz
+  -z, --zip       Comprimir output como zip
+
+Ayuda:
+  --help, -h      Mostrar este mensaje
+  man             Mostrar manual extendido
+
+Ejemplos:
+  seek -i "Explica los decoradores en Python" -t
+  seek -i "Ejemplo de API REST en Flask" -o -m -c -n mi_api
+  seek config --api-key tu_api_key --model deepseek-coder
+```
+
 ## Características principales:
 
 1. **Sistema de configuración**:
@@ -52,42 +90,3 @@
        "max_tokens": 2000
    }
    ```
-
-
-
-```sh
-DEEPSEEK CLI CHAT TOOL - MANUAL
-
-Uso básico:
-  seek -i "tu consulta" [opciones]
-  seek config [opciones]
-
-Comandos principales:
-  config          Configura tu API key y preferencias
-  chat           Modo interactivo de chat
-
-Opciones de consulta:
-  -i, --input     Texto de entrada para DeepSeek (requerido)
-  -t, --terminal  Mostrar output en terminal
-  -o, --output    Guardar output en archivo(s)
-  -n, --name      Nombre base para los archivos de salida
-
-Opciones de output (requieren -o):
-  -m, --markdown  Guardar como archivo markdown
-  -f, --file      Guardar como archivo de texto
-  -c, --code      Extraer bloques de código a archivos
-
-Opciones de compresión (requieren -o):
-  -gz             Comprimir output como tar.gz
-  -z, --zip       Comprimir output como zip
-
-Ayuda:
-  --help, -h      Mostrar este mensaje
-  man             Mostrar manual extendido
-
-Ejemplos:
-  seek -i "Explica los decoradores en Python" -t
-  seek -i "Ejemplo de API REST en Flask" -o -m -c -n mi_api
-  seek config --api-key tu_api_key --model deepseek-coder
-```
-
